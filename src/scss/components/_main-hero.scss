@@ -1,0 +1,112 @@
+.main-hero {
+  height: 100vh;
+  min-height: 960px;
+  position: relative;
+  background-image: url("../images/banner-bg.jpg");
+  background-size: 1600px auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+  .banner {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    //border: 1px solid red;
+    .banner-next, .banner-prev {
+      position: absolute;
+      height: 165px;
+      width: 50px;
+      border: 0;
+      background: rgba(#000, 0.05);
+      cursor: pointer;
+      left: 0;
+      top: 50%;
+      transform:translateY(-50%);
+      font-size: 30px;
+      color: white;
+      &:hover {
+        background: rgba(#000, 0.05);
+      }
+    }
+    .banner-next {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.main-hero .banner-slides-cont {
+  height: 100%;
+  //background: red;
+  margin:0 50px;
+  position: relative;
+  .banner-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .banner-slide-title {
+      font-size: 100px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #333;
+      text-align: center;
+      position: relative;
+      margin: 0;
+      span {
+        color: white;
+      }
+    }
+    .banner-slide-text {
+      font-size: 20px;
+      color: rgba(#000, 0.8);
+      text-align: center;
+      max-width: 850px;
+      position: relative;
+      margin: 40px auto 70px;
+    }
+    .banner-slide-btns {
+      text-align: center;
+      .btn {
+        min-width: 220px;
+      }
+    }
+  }
+}
+
+//-----main hero slider------
+.banner-slide {
+  opacity:0;
+  transition:0.5s all;
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+}
+.banner-slide-title {
+  opacity:0;
+  transform:translateX(-30px) scale(0.5);
+  transition:0.5s 0.3s all;
+}
+.banner-slide-text {
+  opacity:0;
+  transform:translateX(30px) scale(0.5);
+  transition:0.5s 0.3s all;
+}
+.banner-slide-btns {
+  opacity:0;
+  transform:translateY(30px) scale(0.5);
+  transition:0.5s 0.3s all;
+}
+
+.banner-slide-active {
+  opacity:1;
+}
+
+.banner-slide-active .banner-slide-text,
+.banner-slide-active .banner-slide-title,
+.banner-slide-active .banner-slide-btns {
+  opacity:1;
+  transform:translateX(0) scale(1);
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Przykładowa strona</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css">
+        <script src="/src/js/app.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container">
+                <a href="/" class="page-logo">
+                    <img src="/images/logo.png" alt="Web.School">
+                </a>
+                <nav class="page-nav">
+                    <ul class="page-nav-list">
+                        <li><a href="">Home Page</a></li>
+                        <li><a href="">Courses</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="main-hero">
+            <div class="banner" id="mainBanner">
+                <button class="banner-prev" type="button">
+                    &lt;
+                </button>
+                <button class="banner-next" type="button">
+                    &gt;
+                </button>
+                <div class="banner-slides-cont">
+                    <div class="banner-slide banner-slide-active">
+                        <h2 class="banner-slide-title">
+                            learn <span>encode1</span>
+                        </h2>
+                        <div class="banner-slide-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est iste non reprehenderit vero. Accusantium adipisci dolor hic ipsam officiis reiciendis.
+                        </div>
+                        <div class="banner-slide-btns">
+                            <a href="" class="btn btn-primary">See more</a>
+                            <a href="" class="btn btn-secondary">Key features</a>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <h2 class="banner-slide-title">
+                            learn <span>encode2</span>
+                        </h2>
+                        <div class="banner-slide-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est iste non reprehenderit vero. Accusantium adipisci dolor hic ipsam officiis reiciendis.
+                        </div>
+                        <div class="banner-slide-btns">
+                            <a href="" class="btn btn-primary">See more</a>
+                            <a href="" class="btn btn-secondary">Key features</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            function initMap() {
+                var uluru = {
+                    lat: 52.231209,
+                    lng: 20.988037
+                };
+                var map = new google.maps.Map(document.getElementById('mainMap'), {
+                    zoom: 14,
+                    styles: [{"featureType": "all", "elementType": "labels.text.fill", "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]}, {"featureType": "all", "elementType": "labels.text.stroke", "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]}, {"featureType": "all", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 20}]}, {"featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]}, {"featureType": "landscape", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 20}]}, {"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 21}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 17}]}, {"featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 29}, {"weight": 0.2}]}, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 18}]}, {"featureType": "road.local", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 16}]}, {"featureType": "transit", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 19}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 17}]}],
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                    icon: 'images/marker.png'
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIGoZTXRBgLKrFR14OC3eKhop8F8vtE-k&callback=initMap">
+        </script>
+        <section class="main-map" id="mainMap"></section>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>
